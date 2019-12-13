@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import SignedInLinks from './SignedInLinks';
+import SignedOutLinks from './SignedOutLinks';
 
 
 const NavBar = () => {
@@ -9,6 +10,7 @@ const NavBar = () => {
       <div className="container">
         <Link to='/' className="brand-logo"></Link>
         <SignedInLinks />
+        <SignedOutLinks />
       </div>
     </nav>
   )
