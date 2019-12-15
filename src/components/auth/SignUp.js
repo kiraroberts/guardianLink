@@ -35,7 +35,7 @@ class SignUp extends Component {
             <input type="text" id="userName" onChange={this.handleChange} />
           </div>
           <div className="input-field">
-            <button className="btn grey z-depth-0">Login</button>
+            <button className="btn grey z-depth-0">Sign Up</button>
           </div>
         </form>
       </div>
