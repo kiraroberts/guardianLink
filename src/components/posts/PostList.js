@@ -7,7 +7,7 @@ const PostList = () => {
         <div className="card-content grey-text text-darken-3">
           <span className="card-title">Post title</span>
           <p>Posted by {username}</p>
-          <p className="grey-text">{date posted}</p>
+          <p className="grey-text">{dateposted}</p>
         </div>
       </div>
 
@@ -15,7 +15,7 @@ const PostList = () => {
         <div className="card-content grey-text text-darken-3">
           <span className="card-title">Post title</span>
           <p>Posted by {username}</p>
-          <p className="grey-text">{date posted}</p>
+          <p className="grey-text">{dateposted}</p>
         </div>
       </div>
 
@@ -23,9 +23,11 @@ const PostList = () => {
         <div className="card-content grey-text text-darken-3">
           <span className="card-title">Post title</span>
           <p>Posted by {username}</p>
-          <p className="grey-text">{date posted}</p>
+          <p className="grey-text">{dateposted}</p>
         </div>
       </div>
     </div>
   )
 }
+
+export default PostList
