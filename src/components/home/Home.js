@@ -5,12 +5,12 @@ import { connect } from 'react-redux';
 
 class Home extends React.Component {
   render(){
-    console.log(this.props);
+    const { posts } = this.props;
     return(
       <div className="home container">
         <div className="row">
           <div className="col s12 m6">
-            <PostList />
+            <PostList posts={posts} />
           </div>
           <div className="col s12 m5 offset-m1">
             <Notifications />
