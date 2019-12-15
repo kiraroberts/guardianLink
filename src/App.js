@@ -5,6 +5,7 @@ import Home from './components/home/Home';
 import PostContent from './components/posts/PostContent';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
+import CreatePost from './components/posts/CreatePost';
 
 class App extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class App extends React.Component {
             <Route path='/post/:id' component={PostContent} />
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
+            <Route path='/create' component={CreatePost} />
           </Switch>
         </div>
       </BrowserRouter>
