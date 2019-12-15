@@ -8,11 +8,10 @@ class Home extends React.Component {
       <div className="home container">
         <div className="row">
           <div className="col s12 m6">
-
+            <PostList />
           </div>
           <div className="col s12 m5 offset-m1">
             <Notifications />
-            <PostList />
           </div>
         </div>  
       </div>
