@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './components/navbar/Navbar';
 import Home from './components/home/Home';
+import PostContent from './components/posts/PostContent';
 
 class App extends React.Component {
   render() {
@@ -11,6 +12,7 @@ class App extends React.Component {
           <NavBar />
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route path='/post/:id' component={PostContent} />
           </Switch>
         </div>
       </BrowserRouter>
