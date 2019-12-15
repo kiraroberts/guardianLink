@@ -1,31 +1,12 @@
 import React from 'react';
+import PostSummary from './PostSummary';
 
 const PostList = () => {
   return(
     <div className="postList section">
-      <div className="card z-depth-0 post-summary">
-        <div className="card-content grey-text text-darken-3">
-          <span className="card-title">Post title</span>
-          <p>Posted by username</p>
-          <p className="grey-text">dateposted</p>
-        </div>
-      </div>
-
-      <div className="card z-depth-0 post-summary">
-        <div className="card-content grey-text text-darken-3">
-          <span className="card-title">Post title</span>
-          <p>Posted by username</p>
-          <p className="grey-text">dateposted</p>
-        </div>
-      </div>
-
-      <div className="card z-depth-0 post-summary">
-        <div className="card-content grey-text text-darken-3">
-          <span className="card-title">Post title</span>
-          <p>Posted by username</p>
-          <p className="grey-text">dateposted</p>
-        </div>
-      </div>
+      <PostSummary />
+      <PostSummary />
+      <PostSummary />
     </div>
   )
 }
