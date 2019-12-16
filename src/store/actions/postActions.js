@@ -1,6 +1,6 @@
 export const createPost = (post) => {
-  return (dispatch, getState) => {
-    //call to firebase
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    
     dispatch({ type: 'CREATE_POST', post});
   }
-}
+};
