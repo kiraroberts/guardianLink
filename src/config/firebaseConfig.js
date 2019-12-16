@@ -4,7 +4,7 @@ import 'firebase/auth';
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
-  apiKey: "AIzaSyDk9RT1D8cVMmn0TT8G8dLlp0nDeHdsZHQ",
+  apiKey: "",
   authDomain: "guardian-link-6f673.firebaseapp.com",
   databaseURL: "https://guardian-link-6f673.firebaseio.com",
   projectId: "guardian-link-6f673",
