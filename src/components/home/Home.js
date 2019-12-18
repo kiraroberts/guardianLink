@@ -11,7 +11,7 @@ class Home extends React.Component {
     const { posts, auth, notifications } = this.props;
     if (!auth.uid) return <Redirect to='/signin' />
     return(
-      <div className="home container">
+      <div className="home container" style={{ fontFamily: 'Sulphur Point, sans- serif' }}>
         <div className="row">
           <div className="col s12 m6">
             <PostList posts={posts} />

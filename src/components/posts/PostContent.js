@@ -10,7 +10,7 @@ const PostContent = (props) => {
   if (!auth.uid) return <Redirect to='/signin' />
   if (post) {
     return(
-      <div className="container section post-content">
+      <div className="container section post-content" style={{ color: 'black' }, { fontFamily: 'Sulphur Point, sans-serif' }}>
         <div className="card z-depth-0">
           <div className="card-content">
             <span className="card-title">{ post.title }</span>

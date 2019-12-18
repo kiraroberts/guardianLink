@@ -9,9 +9,9 @@ const NavBar = (props) => {
   const { auth, profile } = props;
   const links = auth.uid ? <SignedInLinks profile={profile} /> : <SignedOutLinks />;
   return(
-    <nav className="nav-wrapper grey darken-3">
+    <nav className="nav-wrapper white" id="logo">
       <div className="container">
-        <Link to='/' className="brand-logo">Guardian Link</Link>
+        <Link to='/' className="black-text brand-logo"><i className="material-icons" id="logo" style={{fontSize: '3rem'}}>camera</i><span style={{ fontFamily: 'Permanent Marker, cursive'}}>GuardianLink</span></Link>
         { links }
       </div>
     </nav>

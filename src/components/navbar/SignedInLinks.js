@@ -8,9 +8,9 @@ import { signOut} from '../../store/actions/authActions';
 const SignedInLinks = (props) => {
 
   return (
-    <ul className="right">
-      <li><NavLink to="/create">New Post</NavLink></li>
-      <li><a onClick={props.signOut}>Log Out</a></li>
+    <ul className="right" style={{ color: 'black' }, {fontFamily: 'Sulphur Point, sans-serif'}}>
+      <li><NavLink to="/create"><span style={{ color: 'black' }}>New Post</span></NavLink></li>
+      <li><a onClick={props.signOut}><span style={{ color: 'black' }}>Log Out</span></a></li>
       <li><NavLink to="/" className="btn btn-floating grey darken-1">Pic</NavLink></li>
     </ul>
   )
