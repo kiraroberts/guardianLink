@@ -23,4 +23,23 @@ exports.postCreated = functions.firestore
       time: admin.firestore.FieldValue.serverTimestamp()
     }
     return createNotification(notification);
+});
+
+exports.userJoined = functions.auth.user()
+  .onCreate(user => {
+
+    return admin.firestore().collection('user')
+      .doc(user.uid).get().then(doc => {
+
+        const newUser = doc.data()
+        const notification = {
+          content: 'Registered',
+          user: `${newUser.userName}`,
+          time: admin.firestore.FieldValue.serverTimestamp()
+        }
+
+        return createNotification(notification);
+
+      })
+
 })
