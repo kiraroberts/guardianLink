@@ -19,10 +19,10 @@ class CreatePost extends Component {
     e.preventDefault();
     // console.log(this.state);
     this.props.createPost(this.state)
+    this.props.history.push('/');
   }
   render() {
     const { auth } = this.props;
-    if (auth.uid) return <Redirect to='/' />
     if (!auth.uid) return <Redirect to='/signin' />
     return (
       <div className="container">
