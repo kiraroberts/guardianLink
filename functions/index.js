@@ -25,21 +25,32 @@ exports.postCreated = functions.firestore
     return createNotification(notification);
 });
 
-exports.userJoined = functions.auth.user()
-  .onCreate(user => {
+// exports.userJoined = functions.auth.user()
+//   .onCreate(user => {
 
-    return admin.firestore().collection('user')
-      .doc(user.uid).get().then(doc => {
+//     return admin.firestore().collection('user')
+//       .doc(user.uid).get().then(doc => {
 
-        const newUser = doc.data()
-        const notification = {
-          content: ' just registered',
-          user: `${newUser.userName}`,
-          time: admin.firestore.FieldValue.serverTimestamp()
-        }
+//         const newUser = doc.data()
+//         const notification = {
+//           content: ' just registered',
+//           user: `${newUser.userName}`,
+//           time: admin.firestore.FieldValue.serverTimestamp()
+//         }
 
-        return createNotification(notification);
+//         return createNotification(notification);
 
-      });
+//       });
 
-})
+// })
+
+exports.userJoined = functions.firestore.document("users/{uid}")
+  .onCreate(doc => {
+    const user = doc.data();
+    const notification = {
+      content: " just registered",
+      user: `${user.userName}`,
+      time: admin.firestore.FieldValue.serverTimestamp()
+    };
+    return createNotification(notification);
+  });
